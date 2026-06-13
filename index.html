@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바이브 코딩(Vibe Coding) - 특수교육 선생님을 위한 AI 코딩</title>
+    <meta name="description" content="시각장애 학생들을 가르치는 특수교육 선생님들을 위한 바이브 코딩 안내 페이지입니다.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">본문 바로가기</a>
+    
+    <header role="banner">
+        <div class="container">
+            <h1 id="page-title">바이브 코딩 <span aria-hidden="true">✨</span></h1>
+            <p class="subtitle">특수교육 선생님들을 위한 AI 기반 코딩 가이드</p>
+            <button id="contrast-toggle" aria-pressed="false">고대비 모드 전환</button>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="card" aria-labelledby="what-is">
+            <h2 id="what-is">바이브 코딩(Vibe Coding)이란?</h2>
+            <p><strong>바이브 코딩</strong>은 복잡한 프로그래밍 언어나 문법을 외울 필요 없이, 일상적인 언어(자연어)로 AI에게 명령을 내려 코드를 작성하는 새로운 방식입니다.</p>
+            <p>선생님들께서 상상하시는 교육용 도구와 아이디어를 대화하듯 텍스트로 입력하면, AI가 이를 실제 동작하는 웹페이지나 애플리케이션으로 만들어줍니다.</p>
+        </section>
+
+        <section class="card" aria-labelledby="why-special-ed">
+            <h2 id="why-special-ed">특수교육에서 왜 중요한가요?</h2>
+            <ul class="feature-list">
+                <li>
+                    <h3>맞춤형 교보재 신속 제작</h3>
+                    <p>학생마다 필요한 접근성 설정이 다릅니다. 선생님께서 필요한 맞춤형 기능을 AI에게 설명하기만 하면 바로 교보재가 완성됩니다.</p>
+                </li>
+                <li>
+                    <h3>접근성(Accessibility) 도구 직접 개발</h3>
+                    <p>시각장애 학생들을 위한 스크린 리더 호환, 고대비, 텍스트 음성 변환(TTS) 등 다양한 UDL 요소가 포함된 도구를 직접 구현할 수 있습니다.</p>
+                </li>
+                <li>
+                    <h3>아이디어의 현실화</h3>
+                    <p>코딩 장벽으로 인해 포기했던 혁신적인 교육 아이디어를 이제 기술적인 제약 없이 실현할 수 있습니다.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="card" aria-labelledby="udl-features">
+            <h2 id="udl-features">보편적 학습 설계(UDL) 적용 사례</h2>
+            <p>이 웹페이지 자체도 시각장애인 학생 및 선생님들을 위한 UDL 원칙을 적용하여 만들어졌습니다.</p>
+            <div class="grid-layout">
+                <article class="udl-item" tabindex="0">
+                    <h3>스크린 리더 최적화</h3>
+                    <p>시맨틱 태그(header, main, section)와 ARIA 속성을 사용하여 스크린 리더가 화면의 구조를 정확히 읽을 수 있도록 구성했습니다.</p>
+                </article>
+                <article class="udl-item" tabindex="0">
+                    <h3>키보드 내비게이션</h3>
+                    <p>마우스 없이 Tab 키만으로 모든 요소에 접근할 수 있으며, 현재 포커스된 위치가 명확하게 시각적으로 표시됩니다.</p>
+                </article>
+                <article class="udl-item" tabindex="0">
+                    <h3>고대비 및 가독성</h3>
+                    <p>상단의 '고대비 모드 전환' 버튼을 통해 시각적 피로도를 낮추고 텍스트를 더욱 선명하게 읽을 수 있습니다. 폰트 크기 또한 충분히 크게 설정되었습니다.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2026 특수교육 선생님을 위한 바이브 코딩 안내. 모두를 위한 디자인(UDL) 적용.</p>
+        </div>
+    </footer>
+
+    <script>
+        // High Contrast Toggle Logic
+        const toggleBtn = document.getElementById('contrast-toggle');
+        
+        toggleBtn.addEventListener('click', () => {
+            const isHighContrast = document.body.classList.toggle('high-contrast');
+            toggleBtn.setAttribute('aria-pressed', isHighContrast);
+            
+            if (isHighContrast) {
+                toggleBtn.textContent = "일반 모드 전환";
+            } else {
+                toggleBtn.textContent = "고대비 모드 전환";
+            }
+        });
+    </script>
+</body>
+</html>
